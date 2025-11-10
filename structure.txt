@@ -1,14 +1,18 @@
 OfferHub/
+├── package.json
+├── next.config.js
+├── .env.local
+├── /pages
+│   ├── index.js             → login/register page
+│   ├── dashboard.js         → after login page
+│   ├── api/
+│   │   ├── auth/
+│   │   │   ├── register.js
+│   │   │   ├── login.js
+│   │   └── search.js        → scraper API
 │
-├── backend/
-│   ├── app.py                # Flask backend (or PHP index.php)
-│   ├── scraper.py            # Scraper logic
-│   ├── database.db           # SQLite or MySQL for users
+├── /lib
+│   └── db.js                → MySQL connection file
 │
-├── frontend/
-│   ├── index.html            # Login/Register
-│   ├── dashboard.html        # After login
-│   ├── style.css
-│   ├── script.js
-│
-└── requirements.txt
+├── /styles
+│   └── globals.css
