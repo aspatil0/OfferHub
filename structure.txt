@@ -1,0 +1,14 @@
+OfferHub/
+│
+├── backend/
+│   ├── app.py                # Flask backend (or PHP index.php)
+│   ├── scraper.py            # Scraper logic
+│   ├── database.db           # SQLite or MySQL for users
+│
+├── frontend/
+│   ├── index.html            # Login/Register
+│   ├── dashboard.html        # After login
+│   ├── style.css
+│   ├── script.js
+│
+└── requirements.txt
