@@ -1,18 +1,10 @@
-OfferHub/
-├── package.json
-├── next.config.js
-├── .env.local
-├── /pages
-│   ├── index.js             → login/register page
-│   ├── dashboard.js         → after login page
-│   ├── api/
-│   │   ├── auth/
-│   │   │   ├── register.js
-│   │   │   ├── login.js
-│   │   └── search.js        → scraper API
-│
-├── /lib
-│   └── db.js                → MySQL connection file
-│
-├── /styles
-│   └── globals.css
+offer-finder/
+├─ backend/
+│  ├─ package.json   (will be created by npm init)
+│  ├─ server.js
+│  └─ scraper/
+│     ├─ amazon.js
+│     ├─ flipkart.js
+│     └─ meesho.js
+└─ frontend/
+   └─ index.html
