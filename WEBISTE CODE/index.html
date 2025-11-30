@@ -63,8 +63,7 @@
 <body>
   <header class="nav">
     <div class="brand">
-      <div class="logo"><img src="/images/logo.png" alt="" width="70px"></div>
-      <div class="sitename"></div>
+      <div class="logo"><img src="/images/logo.png" width="70px" alt=""></div>
     </div>
     <nav class="menu" aria-label="main">
       <a href="#home" data-nav>Home</a>
@@ -151,6 +150,11 @@
 
   </main>
 
+  <!-- Footer -->
+  <footer style="margin-top:40px;padding:16px;text-align:center;color:#6b7280;font-size:14px;">
+    © 2025 Adityaraj Patil — All rights reserved. Unauthorized use of the code, design, structure, or ideology of this site is strictly prohibited under the Copyright Act.
+  </footer>
+
   <script>
     // Simple SPA navigation
     function q(el){return document.querySelector(el)}
@@ -228,10 +232,32 @@
 
     // Coupons grid (dummy)
     const couponsGrid = q('#coupons-grid')
-    const COUPONS = Array.from({length:12}).map((_,i)=>({
-      id:'c'+i,title:'Flat '+(10+rand(5,40))+'% OFF at Shop'+(i+1),price:rand(49,499),image:'https://picsum.photos/seed/coupon'+i+'/500/300',buy:'#'
-    }))
-    renderGrid(couponsGrid,COUPONS)
+
+    // Updated COUPONS with 2 real coupons + categories
+    const COUPONS = [
+      { id:'c_vitc', title:'Vitamin C Serum — 18% OFF', price:199, image:'https://picsum.photos/seed/vitc/500/300', buy:'#', category:'Beauty' },
+      { id:'c_trim', title:'OnePlus Trimmer — ₹399 Reduced', price:150, image:'https://picsum.photos/seed/trim/500/300', buy:'#', category:'Grooming' }
+    ]
+
+    // Render coupons
+    renderGrid(couponsGrid, COUPONS)
+
+    // ---- Category Bubbles ----
+    const catWrap = q('#coupon-categories')
+    const catMap = {}
+    COUPONS.forEach(c => { catMap[c.category] = (catMap[c.category] || 0) + 1 })
+
+    catWrap.innerHTML = Object.entries(catMap).map(([cat,count]) => `
+      <div onclick=\"filterCategory('${cat}')\" style=\"cursor:pointer;padding:8px 14px;background:#fff;border-radius:20px;box-shadow:0 2px 6px rgba(0,0,0,0.08);display:flex;align-items:center;gap:8px\">
+        <span>${cat}</span>
+        <span style=\"background:var(--accent);color:white;padding:2px 8px;border-radius:12px;font-size:12px\">${count}</span>
+      </div>
+    `).join('')
+
+    function filterCategory(cat){
+      const list = COUPONS.filter(c => c.category === cat)
+      renderGrid(couponsGrid, list)
+    }(couponsGrid,COUPONS)
 
     // Sell coupon form
     function submitCoupon(e){
