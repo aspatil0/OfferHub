@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OfferHub — Save Smart</title>
+  <style>
+    :root{--accent:#0b74de;--muted:#6b7280;--card:#ffffff;--bg:#f6f8fb}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg);color:#111}
+    /* NAV */
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#fff;border-bottom:1px solid #e6e9ee;position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7cc7ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+    .sitename{font-weight:700;font-size:18px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:#111;text-decoration:none;font-weight:600}
+    .menu a:hover{color:var(--accent)}
+
+    /* Container */
+    .container{max-width:1180px;margin:28px auto;padding:0 18px}
+
+    /* HERO */
+    .hero{background:linear-gradient(180deg,rgba(11,116,222,0.06),transparent);border-radius:12px;padding:34px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center}
+    .hero h1{margin:0;font-size:40px;line-height:1.02}
+    .hero p{margin:0;color:var(--muted);max-width:820px}
+    .cta-row{display:flex;gap:12px;margin-top:6px}
+    .btn{padding:10px 16px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid #e2e8f0}
+
+    /* Product Grid */
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin:18px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06);display:flex;flex-direction:column;gap:10px}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+    .price{font-weight:800;font-size:18px}
+    .buy-row{display:flex;justify-content:space-between;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Products Page search */
+    .search-wrap{display:flex;justify-content:center;padding:18px 0}
+    .search{width:100%;max-width:720px}
+    .search input{width:100%;padding:16px 20px;border-radius:999px;border:1px solid #e6e9ee;font-size:16px;outline:none}
+
+    /* Sell Coupons Form */
+    .form{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    .row{display:flex;gap:12px}
+    .col{flex:1}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type=text],input[type=number],select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee}
+    textarea{min-height:120px}
+
+    /* Responsive */
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:32px}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}.menu{display:none}.nav{padding:10px}.hero{padding:22px}.logo{width:40px;height:40px}}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <div class="logo">OH</div>
+      <div class="sitename">OfferHub</div>
+    </div>
+    <nav class="menu" aria-label="main">
+      <a href="#home" data-nav>Home</a>
+      <a href="#products" data-nav>Products</a>
+      <a href="#getcoupons" data-nav>Get Coupons</a>
+      <a href="#sellcoupons" data-nav>Sell Coupons</a>
+    </nav>
+  </header>
+
+  <main class="container" id="app">
+    <!-- HOME VIEW -->
+    <section id="view-home">
+      <div class="hero">
+        <h1>Welcome to OfferHub</h1>
+        <p>OfferHub is a smart savings platform where you can easily find the best offer products from top shopping sites. Explore deals, save money instantly, and even buy or sell discount coupons. Earn money by selling your unused coupons and help others save too!</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="go('#products')">Shop Products</button>
+          <button class="btn btn-ghost" onclick="go('#getcoupons')">See Coupons</button>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h2>Top Offers</h2>
+        <div class="small muted">Live deals placeholder — dummy data for now</div>
+      </div>
+
+      <div id="home-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <!-- PRODUCTS VIEW -->
+    <section id="view-products" style="display:none">
+      <div class="search-wrap">
+        <div class="search">
+          <input id="product-search" placeholder="Search products, e.g. wireless headphones" aria-label="search products" />
+        </div>
+      </div>
+      <div class="section-title"><h2>Products</h2><div class="small muted">Showing results</div></div>
+      <div id="products-grid" class="grid"></div>
+    </section>
+
+    <!-- GET COUPONS VIEW -->
+    <section id="view-getcoupons" style="display:none">
+      <div class="section-title"><h2>Coupons — Browse & Buy</h2><div class="small muted">Coupons marketplace (dummy)</div></div>
+      <div class="grid" id="coupons-grid"></div>
+    </section>
+
+    <!-- SELL COUPONS VIEW -->
+    <section id="view-sellcoupons" style="display:none">
+      <div class="section-title"><h2>Sell Your Coupon</h2><div class="small muted">Fill the form to submit a coupon for sale</div></div>
+      <div class="form">
+        <form id="sell-form" onsubmit="submitCoupon(event)">
+          <div class="row">
+            <div class="col"><label>Coupon Title</label><input type="text" id="coupon-title" required/></div>
+            <div class="col"><label>Discount (%)</label><input type="number" id="coupon-discount" min="1" max="100" required/></div>
+          </div>
+          <div style="margin-top:12px"><label>Platform / Store</label><input type="text" id="coupon-store" required/></div>
+          <div style="margin-top:12px"><label>Price / Expected Pay (₹)</label><input type="number" id="coupon-price" min="1" required/></div>
+          <div style="margin-top:12px"><label>Notes (optional)</label><textarea id="coupon-note"></textarea></div>
+          <div style="margin-top:12px;display:flex;gap:10px;justify-content:flex-end"><button type="submit" class="btn btn-primary">Submit Coupon</button><button type="button" class="btn btn-ghost" onclick="resetForm()">Reset</button></div>
+        </form>
+      </div>
+      <div style="margin-top:16px" id="sell-result"></div>
+    </section>
+
+  </main>
+
+  <script>
+    // Simple SPA navigation
+    function q(el){return document.querySelector(el)}
+    function qAll(el){return document.querySelectorAll(el)}
+    const views={home: q('#view-home'),products:q('#view-products'),getcoupons:q('#view-getcoupons'),sellcoupons:q('#view-sellcoupons')}
+    function show(view){
+      Object.values(views).forEach(v=>v.style.display='none')
+      views[view].style.display='block'
+      window.location.hash = '#'+view
+    }
+    function go(hash){
+      const name = hash.replace('#','')
+      if(views[name]) show(name)
+    }
+    // initial route
+    window.addEventListener('hashchange',()=>{
+      const v = location.hash.replace('#','')||'home'
+      if(views[v]) show(v)
+    })
+    if(location.hash) window.dispatchEvent(new Event('hashchange'))
+
+    // Dummy product generator
+    const sampleNames = ['Wireless Headphones','Smart Watch','Bluetooth Speaker','Running Shoes','Backpack','Phone Case','Power Bank','Laptop Stand','Gaming Mouse','LED Lamp','Coffee Maker','Fitness Band','Sunglasses','T-Shirt','Desk Organizer']
+    function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+    function makeProduct(i){
+      const name = sampleNames[Math.floor(Math.random()*sampleNames.length)] + ' — Model ' + (100+i)
+      return {
+        id: 'p'+i,
+        name,
+        price: (rand(499,8999)),
+        image: 'https://picsum.photos/seed/offerhub'+i+'/500/400',
+        buy: '#'
+      }
+    }
+    const PRODUCTS = Array.from({length:120}).map((_,i)=>makeProduct(i))
+
+    // render helpers
+    function renderGrid(el,items){
+      el.innerHTML = items.map(p=>`
+        <div class="card" role="article">
+          <img src="${p.image}" alt="${p.name}" loading="lazy"/>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">${p.name}</div>
+            <div class="price">₹${p.price.toLocaleString()}</div>
+          </div>
+          <div class="buy-row">
+            <div class="small muted">Deal ends soon</div>
+            <div><a class="btn btn-primary" href="${p.buy}">Buy</a></div>
+          </div>
+        </div>`).join('')
+    }
+
+    // Home grid: show 9 top offers (dummy)
+    const homeGrid = q('#home-grid')
+    renderGrid(homeGrid, PRODUCTS.slice(0,9))
+
+    // Products page: search logic & initial 39 random
+    const productsGrid = q('#products-grid')
+    const searchInput = q('#product-search')
+    function showRandom39(){
+      const shuffled = PRODUCTS.slice().sort(()=>0.5-Math.random()).slice(0,39)
+      renderGrid(productsGrid,shuffled)
+    }
+    showRandom39()
+    searchInput.addEventListener('input',()=>{
+      const qv = searchInput.value.trim().toLowerCase()
+      if(!qv){
+        // nothing typed -> show 39 random
+        showRandom39();
+        return
+      }
+      const results = PRODUCTS.filter(p=>p.name.toLowerCase().includes(qv)).slice(0,60)
+      renderGrid(productsGrid,results)
+    })
+
+    // Coupons grid (dummy)
+    const couponsGrid = q('#coupons-grid')
+    const COUPONS = Array.from({length:12}).map((_,i)=>({
+      id:'c'+i,title:'Flat '+(10+rand(5,40))+'% OFF at Shop'+(i+1),price:rand(49,499),image:'https://picsum.photos/seed/coupon'+i+'/500/300',buy:'#'
+    }))
+    renderGrid(couponsGrid,COUPONS)
+
+    // Sell coupon form
+    function submitCoupon(e){
+      e.preventDefault()
+      const title = q('#coupon-title').value
+      const disc = q('#coupon-discount').value
+      const store = q('#coupon-store').value
+      const price = q('#coupon-price').value
+      const note = q('#coupon-note').value
+      // simple client-side confirmation
+      q('#sell-result').innerHTML = `<div style="padding:12px;background:#eef9ff;border-radius:8px;margin-top:8px">Coupon <strong>${title}</strong> submitted locally. We will integrate backend & listings soon.</div>`
+      // reset
+      q('#sell-form').reset()
+    }
+    function resetForm(){q('#sell-form').reset();q('#sell-result').innerHTML=''}
+
+    // small accessibility: nav links
+    document.querySelectorAll('[data-nav]').forEach(a=>a.addEventListener('click',ev=>{
+      ev.preventDefault();const h = a.getAttribute('href');go(h)
+    }))
+
+    // On first load: if no hash, show home
+    if(!location.hash) show('home')
+  </script>
+</body>
+</html>
