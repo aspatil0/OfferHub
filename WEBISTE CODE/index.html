@@ -113,6 +113,22 @@
     <!-- SELL COUPONS VIEW -->
     <section id="view-sellcoupons" style="display:none">
       <div class="section-title"><h2>Sell Your Coupon</h2><div class="small muted">Fill the form to submit a coupon for sale</div></div>
+
+      <!-- Ticket style steps -->
+      <div style="display:flex;gap:18px;margin-bottom:20px;flex-wrap:wrap">
+        <!-- Step 1 Ticket -->
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);border-left:6px solid var(--accent)">
+          <h3 style="margin-top:0">Step 1</h3>
+          <p class="muted">Go to your <strong>GPay</strong>, <strong>PhonePe</strong>, or <strong>Shopping app</strong> and check the available coupons. Copy the <strong>coupon code</strong> and note the details like discount % and store name.</p>
+        </div>
+
+        <!-- Step 2 Ticket -->
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);border-left:6px solid #10b981">
+          <h3 style="margin-top:0">Step 2</h3>
+          <p class="muted">Add your coupon here. It will appear in the <strong>Get Coupons</strong> section. When someone buys your coupon, <strong>you earn ₹30 instantly</strong>.</p>
+        </div>
+      </div>
+
       <div class="form">
         <form id="sell-form" onsubmit="submitCoupon(event)">
           <div class="row">
