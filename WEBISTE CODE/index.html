@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" href="/images/apple-touch-icon.png" type="image/x-icon">
   <title>OfferHub — Save Smart</title>
   <style>
     :root{--accent:#0b74de;--muted:#6b7280;--card:#ffffff;--bg:#f6f8fb}
@@ -62,8 +63,8 @@
 <body>
   <header class="nav">
     <div class="brand">
-      <div class="logo">OH</div>
-      <div class="sitename">OfferHub</div>
+      <div class="logo"><img src="/images/logo.png" alt="" width="70px"></div>
+      <div class="sitename"></div>
     </div>
     <nav class="menu" aria-label="main">
       <a href="#home" data-nav>Home</a>
@@ -87,7 +88,7 @@
 
       <div class="section-title">
         <h2>Top Offers</h2>
-        <div class="small muted">Live deals placeholder — dummy data for now</div>
+        <!-- <div class="small muted">Live deals placeholder — dummy data for now</div> -->
       </div>
 
       <div id="home-grid" class="grid" aria-live="polite"></div>
@@ -107,6 +108,10 @@
     <!-- GET COUPONS VIEW -->
     <section id="view-getcoupons" style="display:none">
       <div class="section-title"><h2>Coupons — Browse & Buy</h2><div class="small muted">Coupons marketplace (dummy)</div></div>
+
+      <!-- Category bubbles with coupon count -->
+      <div id="coupon-categories" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px"></div>
+
       <div class="grid" id="coupons-grid"></div>
     </section>
 
