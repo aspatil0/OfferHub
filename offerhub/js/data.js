@@ -6,6 +6,8 @@ const OFFERHUB_PRODUCTS = [
   {id:4,name:"Nike Running Shoes",price:6599,discount:15,platform:"Ajio",platform_url:"https://ajio.example.com/product/4",category:"Footwear",image_url:"https://picsum.photos/seed/product-4/520/320"},
   {id:5,name:'Samsung 55" 4K Smart TV',price:49990,discount:20,platform:'Amazon',platform_url:'https://amazon.example.com/product/5',category:'Electronics',image_url:'https://picsum.photos/seed/product-5/520/320'},
   {id:6,name:"HP Pavilion Laptop",price:45990,discount:10,platform:"Flipkart",platform_url:"https://flipkart.example.com/product/6",category:"Computers",image_url:"https://picsum.photos/seed/product-6/520/320"},
+  {id:13,name:"HP Pavilion Laptop",price:45990,discount:10,platform:"Flipkart",platform_url:"https://flipkart.example.com/product/6",category:"Computers",image_url:"https://picsum.photos/seed/product-6/520/320"},
+  {id:14,name:"HP Pavilion Laptop",price:45990,discount:10,platform:"Flipkart",platform_url:"https://flipkart.example.com/product/6",category:"Computers",image_url:"https://picsum.photos/seed/product-6/520/320"},
   {id:7,name:"Ray-Ban Sunglasses",price:7399,discount:35,platform:"Myntra",platform_url:"https://myntra.example.com/product/7",category:"Accessories",image_url:"https://picsum.photos/seed/product-7/520/320"},
   {id:8,name:"Garnier Facewash",price:149,discount:33,platform:"Amazon",platform_url:"https://amazon.example.com/product/8",category:"Beauty",image_url:"https://picsum.photos/seed/product-8/520/320"},
   {id:9,name:"KitchenAid Mixer",price:35999,discount:12,platform:"Amazon",platform_url:"https://amazon.example.com/product/9",category:"Home",image_url:"https://picsum.photos/seed/product-9/520/320"},
