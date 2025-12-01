@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       coupons[index].revealed = true;
       OfferHub.saveCoupons(coupons);
       renderCoupons();
-      alert('Thank you! The code is revealed. Once a buyer purchases your coupon, we will send you ₹30 as your share.');
+      alert('Thank you! The code is revealed. Once a payment done we share the code '  );
     }
   }
 

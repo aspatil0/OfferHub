@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   function renderFeatured(){
     grid.innerHTML='';
-    const featured = OfferHub.randomProducts(8);
+    const featured = OfferHub.randomProducts(12);
     featured.forEach(p=>grid.appendChild(OfferHub.renderProductCard(p)));
     // react to coupons changes to update badges
     window.addEventListener('offerhub:couponsUpdated', ()=>{
       grid.innerHTML = '';
-      OfferHub.randomProducts(8).forEach(p=> grid.appendChild(OfferHub.renderProductCard(p)));
+      OfferHub.randomProducts(12).forEach(p=> grid.appendChild(OfferHub.renderProductCard(p)));
     });
   }
 
