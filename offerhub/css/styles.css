@@ -81,6 +81,14 @@ button.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));c
 /* Utilities */
 .small{font-size:0.85rem;color:var(--muted-soft)}
 .center{text-align:center}
+/* Pagination controls */
+.pagination-controls{margin-top:1rem;display:flex;gap:0.5rem;align-items:center;justify-content:center}
+.page-button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer;font-weight:700}
+.page-button:hover{background:rgba(255,255,255,0.02)}
+.page-button[disabled]{opacity:0.5;cursor:not-allowed}
+.page-button.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#111;border:none}
+.next-page-card{display:flex;align-items:center;justify-content:center}
+.next-page-card .small{color:var(--muted-soft)}
 /* Responsive */
 @media (max-width:720px){
   .nav-links{display:none}
