@@ -1,7 +1,5 @@
-// App utilities and global state
 (function(){
   window.OfferHub = {};
-  // Create header/navbar
   function renderHeader(){
     const header = document.getElementById('header');
     if(!header) return;
@@ -25,13 +23,11 @@
     })
   }
 
-  // Basic storage helpers
   const STORAGE_COUPONS_KEY = 'offerhub_coupons_v1';
 
   function loadCoupons(){
     const stored = localStorage.getItem(STORAGE_COUPONS_KEY);
     if(stored) return JSON.parse(stored);
-    // if not present, use default
     localStorage.setItem(STORAGE_COUPONS_KEY,JSON.stringify(OFFERHUB_COUPONS_DEFAULT));
     return JSON.parse(localStorage.getItem(STORAGE_COUPONS_KEY));
   }
