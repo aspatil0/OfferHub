@@ -64,10 +64,8 @@
       badge.textContent = couponsCount === 1 ? '1 Coupon Available for this Product' : couponsCount + ' Coupons Available for this Product';
       div.appendChild(badge);
     }
-    const imageUrl = product.image_url || ('https://picsum.photos/seed/product-'+product.id+'/520/320');
     const contentHtml = `
       <div class="platform-pill">${product.platform}</div>
-      <img class="card-media" src="${imageUrl}" alt="${product.name}" loading="lazy" />
       <div class="card-content">
         <h3>${product.name}</h3>
         <div class="meta">${product.category}</div>
