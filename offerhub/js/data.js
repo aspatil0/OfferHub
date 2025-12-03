@@ -1,6 +1,5 @@
 // Dummy JSON data for OfferHub
 const OFFERHUB_PRODUCTS = [
-
 {id:1,name:"boAt Airdopes 141 True Wireless Earbuds",price:1199,discount:40,platform:"Amazon",platform_url:"https://amazon.in/product/1",category:"Electronics",image_url:"https://picsum.photos/seed/product-1/520/320"},
 {id:2,name:"Noise ColorFit Pulse Smartwatch",price:1499,discount:55,platform:"Flipkart",platform_url:"https://flipkart.com/product/2",category:"Wearables",image_url:"https://picsum.photos/seed/product-2/520/320"},
 {id:3,name:"Samsung Galaxy M34 5G",price:15999,discount:22,platform:"Amazon",platform_url:"https://amazon.in/product/3",category:"Mobiles",image_url:"https://picsum.photos/seed/product-3/520/320"},
@@ -22,7 +21,6 @@ const OFFERHUB_PRODUCTS = [
 {id:18,name:"Logitech MK215 Wireless Keyboard Mouse Combo",price:1399,discount:30,platform:"Amazon",platform_url:"https://amazon.in/product/18",category:"Computers",image_url:"https://picsum.photos/seed/product-18/520/320"},
 {id:19,name:"SanDisk 128GB Pendrive USB 3.2",price:799,discount:55,platform:"Flipkart",platform_url:"https://flipkart.com/product/19",category:"Accessories",image_url:"https://picsum.photos/seed/product-19/520/320"},
 {id:20,name:"Canon EOS 1500D DSLR Camera",price:38999,discount:15,platform:"Amazon",platform_url:"https://amazon.in/product/20",category:"Cameras",image_url:"https://picsum.photos/seed/product-20/520/320"},
-
 {id:21,name:"WildHorn Leather Wallet",price:499,discount:62,platform:"Amazon",platform_url:"https://amazon.in/product/21",category:"Fashion",image_url:"https://picsum.photos/seed/product-21/520/320"},
 {id:22,name:"Skybags Casual Backpack",price:899,discount:55,platform:"Amazon",platform_url:"https://amazon.in/product/22",category:"Bags",image_url:"https://picsum.photos/seed/product-22/520/320"},
 {id:23,name:"JBL Tune 760NC Headphones",price:6499,discount:20,platform:"Flipkart",platform_url:"https://flipkart.com/product/23",category:"Electronics",image_url:"https://picsum.photos/seed/product-23/520/320"},
@@ -33,7 +31,6 @@ const OFFERHUB_PRODUCTS = [
 {id:28,name:"HP M100 Wired Mouse",price:299,discount:40,platform:"Amazon",platform_url:"https://amazon.in/product/28",category:"Computers",image_url:"https://picsum.photos/seed/product-28/520/320"},
 {id:29,name:"Fossil FS4545 Men's Watch",price:7499,discount:35,platform:"Amazon",platform_url:"https://amazon.in/product/29",category:"Fashion",image_url:"https://picsum.photos/seed/product-29/520/320"},
 {id:30,name:"Adidas Men’s Slides",price:699,discount:45,platform:"Flipkart",platform_url:"https://flipkart.com/product/30",category:"Fashion",image_url:"https://picsum.photos/seed/product-30/520/320"},
-
 {id:31,name:"Vega Helmet Cruiser",price:899,discount:25,platform:"Amazon",platform_url:"https://amazon.in/product/31",category:"Automobile",image_url:"https://picsum.photos/seed/product-31/520/320"},
 {id:32,name:"Colgate Electric Toothbrush",price:949,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/32",category:"Personal Care",image_url:"https://picsum.photos/seed/product-32/520/320"},
 {id:33,name:"Beardo Beard Oil",price:249,discount:30,platform:"Flipkart",platform_url:"https://flipkart.com/product/33",category:"Grooming",image_url:"https://picsum.photos/seed/product-33/520/320"},
@@ -44,7 +41,6 @@ const OFFERHUB_PRODUCTS = [
 {id:38,name:"Dell 15-inch Laptop Backpack",price:899,discount:55,platform:"Amazon",platform_url:"https://amazon.in/product/38",category:"Bags",image_url:"https://picsum.photos/seed/product-38/520/320"},
 {id:39,name:"AmazonBasics USB-C Cable 1m",price:299,discount:50,platform:"Amazon",platform_url:"https://amazon.in/product/39",category:"Accessories",image_url:"https://picsum.photos/seed/product-39/520/320"},
 {id:40,name:"Mi Home Security Camera 360°",price:2899,discount:28,platform:"Flipkart",platform_url:"https://flipkart.com/product/40",category:"Home Appliances",image_url:"https://picsum.photos/seed/product-40/520/320"},
-
 {id:41,name:"Philips Trimmer BT3102",price:999,discount:35,platform:"Amazon",platform_url:"https://amazon.in/product/41",category:"Personal Care",image_url:"https://picsum.photos/seed/product-41/520/320"},
 {id:42,name:"Nova Hair Straightener",price:649,discount:45,platform:"Amazon",platform_url:"https://amazon.in/product/42",category:"Personal Care",image_url:"https://picsum.photos/seed/product-42/520/320"},
 {id:43,name:"Zebronics Wired Keyboard",price:349,discount:30,platform:"Amazon",platform_url:"https://amazon.in/product/43",category:"Computers",image_url:"https://picsum.photos/seed/product-43/520/320"},
@@ -55,7 +51,6 @@ const OFFERHUB_PRODUCTS = [
 {id:48,name:"Usha Mixer Grinder 750W",price:2999,discount:35,platform:"Amazon",platform_url:"https://amazon.in/product/48",category:"Kitchen",image_url:"https://picsum.photos/seed/product-48/520/320"},
 {id:49,name:"Prestige Gas Stove 2 Burner",price:3299,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/49",category:"Kitchen",image_url:"https://picsum.photos/seed/product-49/520/320"},
 {id:50,name:"Milton Thermosteel Bottle 1L",price:699,discount:45,platform:"Amazon",platform_url:"https://amazon.in/product/50",category:"Home",image_url:"https://picsum.photos/seed/product-50/520/320"},
-
 {id:51,name:"Boat Wave Call Smartwatch",price:1499,discount:70,platform:"Amazon",platform_url:"https://amazon.in/product/51",category:"Wearables",image_url:"https://picsum.photos/seed/product-51/520/320"},
 {id:52,name:"Sony WH-CH520 Bluetooth Headphones",price:4499,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/52",category:"Electronics",image_url:"https://picsum.photos/seed/product-52/520/320"},
 {id:53,name:"Echo Dot 5th Gen Smart Speaker",price:4499,discount:25,platform:"Amazon",platform_url:"https://amazon.in/product/53",category:"Home Appliances",image_url:"https://picsum.photos/seed/product-53/520/320"},
@@ -66,8 +61,7 @@ const OFFERHUB_PRODUCTS = [
 {id:58,name:"Lenovo Tab M10 HD",price:8999,discount:22,platform:"Amazon",platform_url:"https://amazon.in/product/58",category:"Tablets",image_url:"https://picsum.photos/seed/product-58/520/320"},
 {id:59,name:"Sony Alpha A6400 Mirrorless Camera",price:84999,discount:10,platform:"Amazon",platform_url:"https://amazon.in/product/59",category:"Cameras",image_url:"https://picsum.photos/seed/product-59/520/320"},
 {id:60,name:"Realme Smart TV 43-inch",price:22999,discount:18,platform:"Flipkart",platform_url:"https://flipkart.com/product/60",category:"TV",image_url:"https://picsum.photos/seed/product-60/520/320"},
-
-{id:61,name:"LG Refrigerator 190L",price:15999,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/61",category:"Appliances",image_url:"https://picsum.photos/seed/product-61/520/320"},
+{id:61,name:"LG Refrigrator 190L",price:15999,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/61",category:"Appliances",image_url:"https://picsum.photos/seed/product-61/520/320"},
 {id:62,name:"Whirlpool Washing Machine 7kg",price:13999,discount:25,platform:"Flipkart",platform_url:"https://flipkart.com/product/62",category:"Appliances",image_url:"https://picsum.photos/seed/product-62/520/320"},
 {id:63,name:"Dyson V8 Vacuum Cleaner",price:29999,discount:10,platform:"Amazon",platform_url:"https://amazon.in/product/63",category:"Home Appliances",image_url:"https://picsum.photos/seed/product-63/520/320"},
 {id:64,name:"Canon G2012 Printer",price:13499,discount:18,platform:"Amazon",platform_url:"https://amazon.in/product/64",category:"Electronics",image_url:"https://picsum.photos/seed/product-64/520/320"},
@@ -77,7 +71,6 @@ const OFFERHUB_PRODUCTS = [
 {id:68,name:"Jockey Men’s Boxers Pack of 2",price:549,discount:25,platform:"Amazon",platform_url:"https://amazon.in/product/68",category:"Fashion",image_url:"https://picsum.photos/seed/product-68/520/320"},
 {id:69,name:"Pigeon Chopper Pro XL",price:399,discount:45,platform:"Amazon",platform_url:"https://amazon.in/product/69",category:"Kitchen",image_url:"https://picsum.photos/seed/product-69/520/320"},
 {id:70,name:"Tata Coffee Quick Filter",price:299,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/70",category:"Grocery",image_url:"https://picsum.photos/seed/product-70/520/320"},
-
 {id:71,name:"Garnier Men Face Wash",price:199,discount:25,platform:"Flipkart",platform_url:"https://flipkart.com/product/71",category:"Beauty",image_url:"https://picsum.photos/seed/product-71/520/320"},
 {id:72,name:"Swiss Beauty Eyeshadow Palette",price:249,discount:35,platform:"Amazon",platform_url:"https://amazon.in/product/72",category:"Beauty",image_url:"https://picsum.photos/seed/product-72/520/320"},
 {id:73,name:"Aroma Electric Room Heater",price:1299,discount:40,platform:"Amazon",platform_url:"https://amazon.in/product/73",category:"Home Appliances",image_url:"https://picsum.photos/seed/product-73/520/320"},
@@ -88,7 +81,6 @@ const OFFERHUB_PRODUCTS = [
 {id:78,name:"Casio Scientific Calculator",price:699,discount:15,platform:"Amazon",platform_url:"https://amazon.in/product/78",category:"Education",image_url:"https://picsum.photos/seed/product-78/520/320"},
 {id:79,name:"Dettol Handwash 1L",price:129,discount:10,platform:"Amazon",platform_url:"https://amazon.in/product/79",category:"Grocery",image_url:"https://picsum.photos/seed/product-79/520/320"},
 {id:80,name:"Surf Excel Matic 2kg",price:349,discount:20,platform:"Flipkart",platform_url:"https://flipkart.com/product/80",category:"Grocery",image_url:"https://picsum.photos/seed/product-80/520/320"},
-
 {id:81,name:"boAt Bassheads 103 Wired Earphones",price:349,discount:30,platform:"Amazon",platform_url:"https://amazon.in/product/81",category:"Electronics",image_url:"https://picsum.photos/seed/product-81/520/320"},
 {id:82,name:"Samsung Galaxy S24 Ultra",price:119999,discount:5,platform:"Amazon",platform_url:"https://amazon.in/product/82",category:"Mobiles",image_url:"https://picsum.photos/seed/product-82/520/320"},
 {id:83,name:"OnePlus Buds Z2",price:3999,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/83",category:"Electronics",image_url:"https://picsum.photos/seed/product-83/520/320"},
@@ -99,7 +91,6 @@ const OFFERHUB_PRODUCTS = [
 {id:88,name:"Poco X6 Pro 5G",price:24999,discount:10,platform:"Flipkart",platform_url:"https://flipkart.com/product/88",category:"Mobiles",image_url:"httpsum.photos/seed/product-88/520/320"},
 {id:89,name:"Insta360 GO 3 Action Camera",price:29999,discount:12,platform:"Amazon",platform_url:"https://amazon.in/product/89",category:"Cameras",image_url:"https://picsum.photos/seed/product-89/520/320"},
 {id:90,name:"JBL Partybox 110 Speaker",price:29999,discount:20,platform:"Amazon",platform_url:"https://amazon.in/product/90",category:"Electronics",image_url:"https://picsum.photos/seed/product-90/520/320"},
-
 {id:91,name:"TWS M80 Gaming Earbuds",price:999,discount:60,platform:"Meesho",platform_url:"https://meesho.com/product/91",category:"Electronics",image_url:"https://picsum.photos/seed/product-91/520/320"},
 {id:92,name:"Trendy Women Kurti Set",price:499,discount:70,platform:"Meesho",platform_url:"https://meesho.com/product/92",category:"Fashion",image_url:"https://picsum.photos/seed/product-92/520/320"},
 {id:93,name:"Stainless Steel Water Bottle 2L",price:349,discount:55,platform:"Meesho",platform_url:"https://meesho.com/product/93",category:"Home",image_url:"https://picsum.photos/seed/product-93/520/320"},

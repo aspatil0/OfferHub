@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       container.appendChild(div);
     });
 
-    // attach events
     container.querySelectorAll('.buy-btn').forEach(btn => btn.addEventListener('click', onBuyClick));
   }
 
@@ -39,9 +38,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const coupons = OfferHub.getCoupons();
     const index = coupons.findIndex(c => c.id === id);
     if(index === -1) return;
-    // Simulate payment flow
     if(confirm('Simulate payment of ' + OfferHub.formatCurrency(coupons[index].price) + ' to buy this coupon?')){
-      // Mark revealed and save
       coupons[index].revealed = true;
       OfferHub.saveCoupons(coupons);
       renderCoupons();
