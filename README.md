@@ -36,11 +36,9 @@
 
 ## Demo
 
-Check out the live demo [here](https://your-live-demo-link.com)  
+Check out the live demo [here](https://adityas-offerhub.vercel.app/)  
 
----
 
-## Installation
 
 Clone the repository:
 
