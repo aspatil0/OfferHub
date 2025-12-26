@@ -1,5 +1,5 @@
 
-**OfferHub** is a web platform that helps users discover the latest deals, discounts, and offers from multiple sources. Save money, explore trending promotions, and never miss out on a deal again. Built with modern web technologies for a fast, responsive, and user-friendly experience.  
+ 
 
 ---
 
