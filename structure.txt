@@ -4,7 +4,6 @@ offer-finder/
 │  ├─ server.js
 │  └─ scraper/
 │     ├─ amazon.js
-│     ├─ flipkart.js
 │     └─ meesho.js
 └─ frontend/
    └─ index.html
